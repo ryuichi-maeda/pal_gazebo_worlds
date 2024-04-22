@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <sdf version='1.4'>
-<model name='table'>
+<model name='table_blue'>
       <static>1</static>
-      <link name='receptacle_table_link'>
+      <link name='link'>
         <collision name='surface'>
-          <pose>0.000000 0.000000 0.800000 0.000000 0.000000 0.000000</pose>
+          <pose>0.000000 0.000000 0.500000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <box>
-              <size>1.000000 0.800000 0.030000</size>
+              <size>0.500000 0.500000 0.030000</size>
             </box>
           </geometry>
           <surface>
@@ -21,25 +21,25 @@
           </surface>
         </collision>
         <visual name='visual1'>
-          <pose>0.000000 0.000000 0.800000 0.000000 0.000000 0.000000</pose>
+          <pose>0.000000 0.000000 0.500000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <box>
-              <size>1.000000 0.800000 0.030000</size>
+              <size>0.500000 0.500000 0.030000</size>
             </box>
           </geometry>
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
+              <name>Gazebo/Blue</name>
             </script>
           </material>
         </visual>
         <collision name='front_left_leg'>
-          <pose>0.480000 0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>0.230000 0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <surface>
@@ -53,11 +53,11 @@
           </surface>
         </collision>
         <visual name='front_left_leg'>
-          <pose>0.480000 0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>0.230000 0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <material>
@@ -68,11 +68,11 @@
           </material>
         </visual>
         <collision name='front_right_leg'>
-          <pose>0.480000 -0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>0.230000 -0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <surface>
@@ -86,11 +86,11 @@
           </surface>
         </collision>
         <visual name='front_right_leg'>
-          <pose>0.480000 -0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>0.230000 -0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <material>
@@ -101,11 +101,11 @@
           </material>
         </visual>
         <collision name='back_right_leg'>
-          <pose>-0.480000 -0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>-0.230000 -0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <surface>
@@ -119,11 +119,11 @@
           </surface>
         </collision>
         <visual name='back_right_leg'>
-          <pose>-0.480000 -0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>-0.230000 -0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <material>
@@ -134,11 +134,11 @@
           </material>
         </visual>
         <collision name='back_left_leg'>
-          <pose>-0.480000 0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>-0.230000 0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <surface>
@@ -152,11 +152,11 @@
           </surface>
         </collision>
         <visual name='back_left_leg'>
-          <pose>-0.480000 0.380000 0.400000 0.000000 0.000000 0.000000</pose>
+          <pose>-0.230000 0.230000 0.250000 0.000000 0.000000 0.000000</pose>
           <geometry>
             <cylinder>
               <radius>0.020000</radius>
-              <length>0.800000</length>
+              <length>0.500000</length>
             </cylinder>
           </geometry>
           <material>
@@ -174,17 +174,5 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
-        <!-- Link to which the plugin is attached -->
-        <bodyName>receptacle_table_link</bodyName>
-        <!-- ROS topic name to publish the pose information -->
-        <topicName>receptacle_table</topicName>
-        <!-- Frame name for the TF -->
-        <frameName>world</frameName>
-        <!-- Update rate in Hz -->
-        <updateRate>30.0</updateRate>
-        <!-- Gaussian noise magnitude -->
-        <gaussianNoise>0.01</gaussianNoise>
-    </plugin>
     </model>
 </sdf>

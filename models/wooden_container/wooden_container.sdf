@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name='wooden_container'>
+      <static>0</static>
+      <link name='link'>
+        <inertial>
+          <mass>0.25</mass>
+          <inertia>
+            <ixx>0.000000</ixx>
+            <ixy>0.000000</ixy>
+            <ixz>0.000000</ixz>
+            <iyy>0.000000</iyy>
+            <iyz>0.000000</iyz>
+            <izz>0.000000</izz>
+          </inertia>
+        </inertial>
+        <collision name="bottom">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.3 0.01</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="bottom">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.3 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+
+        <collision name="x">
+          <pose>0.155 0 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.32 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="x">
+          <pose>0.155 0 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.32 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+
+        <collision name="-x">
+          <pose>-0.155 0 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.32 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="-x">
+          <pose>-0.155 0 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.32 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+
+        <collision name="y">
+          <pose>0 0.155 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.01 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="y">
+          <pose>0 0.155 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.01 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+
+        <collision name="-y">
+          <pose>0 -0.155 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.01 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="-y">
+          <pose>0 -0.155 0.045 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.3 0.01 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+
+        <velocity_decay>
+          <linear>0.000000</linear>
+          <angular>0.000000</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+  </model>
+</sdf>

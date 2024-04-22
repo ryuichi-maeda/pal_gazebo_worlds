@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <sdf version='1.4'>
-  <model name="green_cube">
+  <model name="red_cube">
             <allow_auto_disable>0</allow_auto_disable>
 
       <static>0</static>
-      <link name='green_cube_link'>
+      <link name='red_cube_link'>
         <inertial>
           <mass>0.25</mass>
           <inertia>
@@ -25,7 +25,7 @@
           <material>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Green</name>
+              <name>Gazebo/Red</name>
             </script>
           </material>
         </visual>
@@ -62,9 +62,9 @@
       </link>
     <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
         <!-- Link to which the plugin is attached -->
-        <bodyName>green_cube_link</bodyName>
+        <bodyName>red_cube_link</bodyName>
         <!-- ROS topic name to publish the pose information -->
-        <topicName>green_cube</topicName>
+        <topicName>red_cube</topicName>
         <!-- Frame name for the TF -->
         <frameName>world</frameName>
         <!-- Update rate in Hz -->

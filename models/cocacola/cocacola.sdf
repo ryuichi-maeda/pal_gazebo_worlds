@@ -1,7 +1,7 @@
 <sdf version="1.4">
   <model name="cocacola">
     <static>0</static>
-    <link name="link">
+    <link name="cocacola_link">
       <inertial>
         <mass>0.25</mass>
         <inertia>
@@ -17,14 +17,17 @@
         <pose>0 0 0.075 3.1416 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.04</radius>
+            <radius>0.025</radius>
             <length>0.15</length>
           </cylinder>
         </geometry>
         <surface>
           <bounce />
           <friction>
-            <ode />
+            <ode>
+              <mu>60.0</mu>
+              <mu2>60.0</mu2>
+            </ode>
           </friction>
           <contact>
             <ode />
@@ -35,7 +38,7 @@
         <pose>0 0 0.075 3.1416 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.04</radius>
+            <radius>0.025</radius>
             <length>0.15</length>
           </cylinder>
         </geometry>
@@ -55,5 +58,17 @@
       <kinematic>0</kinematic>
       <gravity>1</gravity>
     </link>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <!-- Link to which the plugin is attached -->
+        <bodyName>cocacola_link</bodyName>
+        <!-- ROS topic name to publish the pose information -->
+        <topicName>cocacola</topicName>
+        <!-- Frame name for the TF -->
+        <frameName>world</frameName>
+        <!-- Update rate in Hz -->
+        <updateRate>30.0</updateRate>
+        <!-- Gaussian noise magnitude -->
+        <gaussianNoise>0.01</gaussianNoise>
+    </plugin>
   </model>
 </sdf>

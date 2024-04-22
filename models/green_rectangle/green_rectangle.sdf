@@ -2,7 +2,7 @@
 <sdf version='1.4'>
   <model name="green_rectangle">      
       <static>0</static>
-      <link name='link'>
+      <link name='green_rectangle_link'>
         <inertial>
           <mass>0.25</mass>
           <inertia>
@@ -58,5 +58,17 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>        
       </link>   
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <!-- Link to which the plugin is attached -->
+        <bodyName>green_rectangle_link</bodyName>
+        <!-- ROS topic name to publish the pose information -->
+        <topicName>green_rectangle</topicName>
+        <!-- Frame name for the TF -->
+        <frameName>world</frameName>
+        <!-- Update rate in Hz -->
+        <updateRate>30.0</updateRate>
+        <!-- Gaussian noise magnitude -->
+        <gaussianNoise>0.01</gaussianNoise>
+    </plugin>
   </model>
 </sdf>

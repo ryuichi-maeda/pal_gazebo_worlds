@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
  <model name="ikea_folke_chair">
-    <link name="link">
+    <link name="ikea_folke_chair_link">
      <inertial>
        <mass>10</mass>
        <inertia>
@@ -30,5 +30,17 @@
        </geometry>
      </visual>
     </link>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <!-- Link to which the plugin is attached -->
+        <bodyName>ikea_folke_chair_link</bodyName>
+        <!-- ROS topic name to publish the pose information -->
+        <topicName>ikea_chair</topicName>
+        <!-- Frame name for the TF -->
+        <frameName>world</frameName>
+        <!-- Update rate in Hz -->
+        <updateRate>30.0</updateRate>
+        <!-- Gaussian noise magnitude -->
+        <gaussianNoise>0.01</gaussianNoise>
+    </plugin>
  </model>
 </sdf>

@@ -263,6 +263,39 @@
       <uri>model://citizen_extras_male_03</uri>
       <pose>4.0 0.53 0.01 0.0125 0.0023 -1.718</pose>
     </include>
+    <actor name="actor">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>2 2 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>2</time>
+            <pose>2 -2 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>2.5</time>
+            <pose>2 -2 0 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>7</time>
+            <pose>2 2 0 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>7.5</time>
+            <pose>2 2 0 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor> 
 
     <light type="point" name="male03light">
       <!-- Light in front of the face of the model -->
