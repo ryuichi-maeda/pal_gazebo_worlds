@@ -68,45 +68,50 @@
 
     <!-- Objects cans and pringles -->
     <include>
+      <uri>model://plastic_cup_purple</uri>
+      <name>1</name>
+      <pose>1.7 -0.48 0.75 0 0 2.3</pose>
+    </include>
+    <include>
+      <uri>model://plastic_cup_pink</uri>
+      <name>2</name>
+      <pose>1.7 -0.37 0.7 0 0 2.3</pose>
+    </include>
+    <include>
       <uri>model://pringles</uri>
-      <name>pringles</name>
-      <pose>1.7 -0.3 0.7 0 0 2.3</pose>
-    </include>
-    <include>
-      <uri>model://can_pepsi</uri>
-      <name>can_pepsi</name>
-      <pose>1.68 -0.15 0.7 0 0 1.57</pose>
-    </include>
-    <include>
-      <uri>model://red_rectangle</uri>
-      <name>red_rectangle</name>
-      <pose>1.7 -0.05 0.7 0 0 0</pose>
+      <name>3</name>
+      <pose>1.68 -0.25 0.7 0 0 1.57</pose>
     </include>
     <include>
       <uri>model://can_coke</uri>
-      <name>can_coke</name>
-      <pose>1.66 0.05 0.7 0 0 1.57</pose>
-    </include>
-    <include>
-      <uri>model://green_rectangle</uri>
-      <name>green_rectangle</name>
-      <pose>1.68 0.12 0.7 0 0 0</pose>
-    </include>
-    <include>
-      <uri>model://can_fanta</uri>
-      <name>can_fanta</name>
-      <pose>1.68 0.25 0.7 0 0 1.57</pose>
+      <name>4</name>
+      <pose>1.7 -0.13 0.7 0 0 0</pose>
     </include>
     <include>
       <uri>model://pringles2</uri>
-      <name>pringles2</name>
-      <pose>1.65 0.33 0.7 0 0 1.57</pose>
+      <name>5</name>
+      <pose>1.66 -0.01 0.7 0 0 1.57</pose>
     </include>
     <include>
-      <uri>model://yellow_rectangle</uri>
-      <name>yellow_rectangle</name>
-      <pose>1.68 0.42 0.7 0 0 0</pose>
+      <uri>model://plastic_cup_orange</uri>
+      <name>6</name>
+      <pose>1.68 0.1 0.7 0 0 0</pose>
     </include>
+    <include>
+      <uri>model://can_pepsi</uri>
+      <name>7</name>
+      <pose>1.68 0.22 0.7 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://can_fanta</uri>
+      <name>8</name>
+      <pose>1.65 0.33 0.7 0 0 1.57</pose>
+    </include>
+    <!-- <include>
+      <uri>model://plastic_cup_purple</uri>
+      <name>9</name>
+      <pose>1.68 0.44 0.7 0 0 0</pose>
+    </include> -->
 
     <!-- Objects drinks and rectangles-->
     <!-- <include> -->
